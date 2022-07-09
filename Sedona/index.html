@@ -8,7 +8,7 @@
     <header class="main-header">
         <nav class="main-navigation">
             <a class="main-logo">
-                <img src="images/logo.svg" alt="Логотип города Седона">
+                <img src="images/logo.jpg" alt="Логотип города Седона">
             </a>
             <ul class="navigation-list">
                 <li class="navigation-item">
@@ -27,7 +27,7 @@
         </nav>
     </header>
     <main class="container">
-        <h1 class="visual-hidden">Сайт города Седона</h1>
+        <h1 class="visually-hidden">Сайт города Седона</h1>
         <p class="welcome">
             <span>Welcome</span> <br>
             <span>to the gorgeous</span> <br>
@@ -43,7 +43,7 @@
                     <h3>НАСТОЯЩИЙ ГОРОДОК</h3>
                     <span>— №1 — </span><br>
                     <p>Седона - не атракцион для туристов, там течет своя жизнь</p>
-                    <img src="images/city.jpeg" alt="Фотография города Седона" class="right">
+                    <img src="images/city.jpg" alt="Фотография города Седона" class="right">
                     <ul class="sub-feature-list">
                         <li class="sub-feature-item">
                             <h4>Жилье</h4>
@@ -62,7 +62,7 @@
                     </ul>
                 </li>
                 <li class="feature-item wide">
-                    <img src="images/bridge.jpeg" alt="Фотография моста Дьявола" class="left">
+                    <img src="images/bridge.jpg" alt="Фотография моста Дьявола" class="left">
                     <h3>ТАМ ЕСТЬ  МОСТ ДЬЯВОЛА</h3>
                     <span>— №2 —</span><br>
                     <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -84,7 +84,7 @@
                 </li>
             </ul>
         </section>
-        <section class="appointment">
+        <section class="search-form-title">
             <h2>Заинтересовались?</h2>
             <p>
                 Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне
@@ -95,7 +95,7 @@
         </section>
         <section class="map">
             <h2 class="visual-hidden">Карта</h2>
-            <iframe>Карта</iframe>
+            <img src="images/map.jpg" alt="Седона на карте">
         </section>
     </main>
     <footer class="main-footer">
@@ -104,15 +104,48 @@
         </p>
         <div class="footer-social">
             <ul class="social-list">
-                <li class="social-item"><a href="#">Twitter</a></li>
-                <li class="social-item"><a href="#">Facebook</a></li>
-                <li class="social-item"><a href="#">YouTube</a></li>
+                <li class="social-item"><a href="#" aria-label="Twitter"></a></li>
+                <li class="social-item"><a href="#" aria-label="Facebook"></a></li>
+                <li class="social-item"><a href="#" aria-label="YouTube"></a></li>
             </ul>
         </div>
         <p class="footer-copyright">
             <b>website by</b>
-            <a href="#"><img src="" alt="Логотип Daniil-Solo"></a>
+            <a href="https://github.com/Daniil-Solo" aria-label="Ссылка на автора">
+                <img
+                    src="https://avatars.githubusercontent.com/u/80649413?v=4"
+                    alt="Daniil-Solo"
+                    width="41px"
+                    height="41px"
+                >
+            </a>
         </p>
     </footer>
+    <section class="search-form">
+        <h2 class="visually-hidden">Фильтры поиска</h2>
+        <form method="GET" action="#">
+            <p class="filter-item">
+                <label for="arrival-date">Дата заезда:</label>
+                <input id="arrival-date" type="date" name="arrival-date" value="2022-07-15">
+            </p>
+            <p class="filter-item">
+                <label for="departure-date">Дата выезда:</label>
+                <input id="departure-date" type="date" name="departure-date" value="2022-07-15">
+            </p>
+            <p class="filter-item">
+                <label for="adults-number">Взрослые:</label>
+                <button type="button" class="inc" aria-label="Уменьшить число взрослых на 1">-</button>
+                <input id="adults-number" type="number" value="2" min="0" name="adults-number">
+                <button type="button" class="dec" aria-label="Увеличить число взрослых на 1">+</button>
+            </p>
+            <p class="filter-item">
+                <label for="children-number">Дети:</label>
+                <button type="button" class="inc" aria-label="Уменьшить число взрослых на 1">-</button>
+                <input id="children-number" type="number" value="0" min="0" name="children-number">
+                <button type="button" class="dec" aria-label="Увеличить число взрослых на 1">+</button>
+            </p>
+            <button type="submit">Найти</button>
+        </form>
+    </section>
 </body>
 </html>
