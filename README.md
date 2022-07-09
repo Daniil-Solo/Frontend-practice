@@ -1,1 +1,1 @@
-# Frontend-practivce
+# Frontend-practice
